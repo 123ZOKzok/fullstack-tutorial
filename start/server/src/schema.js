@@ -40,6 +40,11 @@ type Launch {
     cancelTrip(launchId: ID!): TripUpdateResponse!
     login(email: String): User
   }
+  type TripUpdateResponse {
+    success: Boolean!
+    message: String
+    launches: [Launch]
+  }
 `;
 
 module.exports = typeDefs;
