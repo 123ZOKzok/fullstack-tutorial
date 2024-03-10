@@ -12,7 +12,7 @@ const store = createStore();
 
 const server = new ApolloServer({
   typeDefs,
-  resolvers, //highlight-line
+  resolvers,
   dataSources: () => ({
     launchAPI: new LaunchAPI(),
     userAPI: new UserAPI({ store }),
@@ -34,8 +34,8 @@ const server = new ApolloServer({
 
 server.listen().then(() => {
   console.log(`
-    Server is running!
-    Listening on port 4000
-    Explore at https://studio.apollographql.com/sandbox
-  `);
+  Server is running!
+  Listening on port 4000
+  Explore at https://studio.apollographql.com/sandbox
+`);
 });
