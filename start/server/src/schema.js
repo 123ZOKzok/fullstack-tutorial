@@ -35,6 +35,11 @@ type Launch {
     launch(id: ID!): Launch
     me: User
   }
+  type Mutation {
+    bookTrips(launchIds: [ID]!): TripUpdateResponse!
+    cancelTrip(launchId: ID!): TripUpdateResponse!
+    login(email: String): User
+  }
 `;
 
 module.exports = typeDefs;
