@@ -37,6 +37,7 @@ const CancelTripButton: React.FC<ActionButtonProps> = ({ id }) => {
           id: localStorage.getItem("userId"),
         }),
         fields: {
+          //@ts-ignore
           trips (existingTrips: Reference[], { readField }) {
             return existingTrips.filter(
               (tripRef) => readField("id", tripRef) !== launch.id
